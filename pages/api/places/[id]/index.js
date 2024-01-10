@@ -18,4 +18,12 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ place: place, mesg: "yeiiiii update"});
   }
+  
+  
+  if (req.method === `DELETE`) {
+    const place = await Place.findByIdAndDelete(id);
+
+    return res.status(200).json({ place: place, mesg: "delete"});
+  }
+  
 }

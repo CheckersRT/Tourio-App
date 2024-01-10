@@ -1,18 +1,12 @@
 import mongoose from "mongoose";
 
 const PlaceSchema = new mongoose.Schema({
-  location: { 
-    type: String, 
-    required: true 
-},
-name:{ type: String, required: true },
-img:{ type: String },
-name:{ type: String, required: true },
-description:{ type: String, required: true },
-mapUrl:{ type: String  },
+  location: {type: String,required: true,  },
+  name: { type: String, required: true },
+  image: { type: String, required: true },
 
-
-
+  description: { type: String, required: true },
+  mapURL: { type: String, required: true  },
 });
 
-export default mongoose?.models?.Place || mongoose.model("Place", PlaceSchema)
+export default mongoose?.models?.Place || mongoose.model("Place", PlaceSchema);

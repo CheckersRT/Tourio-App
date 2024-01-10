@@ -8,5 +8,10 @@ export default async function handler(req, res) {
     const places = await Place.find();
     return res.status(200).json(places);
   }
+  if (req.method === `POST`) {
+    const places = req.body;
+    const newPlace = await Place.create(places);
+    return res.status(200).json({ success: true, data: newPlace});
+  }
 
 }

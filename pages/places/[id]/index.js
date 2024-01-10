@@ -44,6 +44,7 @@ export default function DetailsPage() {
   function deletePlace() {
     console.log("deleted?");
   }
+ console.log(data, place, "dfsadvsevfsedvsdv");
 
   return (
     <>

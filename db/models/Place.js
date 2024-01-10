@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
-const { Schema } = mongoose;
-
-const placeSchema = new Schema({
+const PlaceSchema = new mongoose.Schema({
   location: { 
     type: String, 
     required: true 
@@ -17,6 +15,4 @@ mapUrl:{ type: String  },
 
 });
 
-const Place = mongoose.models.Place || mongoose.model("Place", placeSchema);
-
-export default Place;
+export default mongoose?.models?.Place || mongoose.model("Place", PlaceSchema)

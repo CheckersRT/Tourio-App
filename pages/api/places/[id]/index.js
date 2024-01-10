@@ -11,4 +11,11 @@ export default async function handler(req, res) {
     const place = await Place.findById(id);
     return res.status(200).json({ place: place});
   }
+  if (req.method === `PATCH`) {
+    const place = await Place.findByIdAndUpdate(id, {
+      $set: req.body,
+    });
+
+    return res.status(200).json({ place: place, mesg: "yeiiiii update"});
+  }
 }
